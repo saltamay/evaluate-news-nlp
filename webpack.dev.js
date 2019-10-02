@@ -20,6 +20,20 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    compress: true,
+    historyApiFallback: true,
+    hot: true,
+    inline: true,
+    host: 'localhost', // Defaults to `localhost`
+    port: 8081, // Defaults to 8080
+    proxy: {
+      '^/api/*': {
+        target: 'http://localhost:8081/api/',
+        secure: false
+      }
+    }
+  },
   plugins: [
     new CleanWebpackPlugin({
       // Simulate the removal of files
