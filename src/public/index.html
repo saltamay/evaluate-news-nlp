@@ -4,9 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Analyze It!</title>
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <main class="content-wrapper">
+    <section class="user-input-section">
+      <h1>Analyze This!</h1>
+      <p>Analyze this is an app that uses NLP(Natural Language Processing) to analyze your sentimentaly, summarize it and gives you hashtag suggestions.</p>
+      <div class="user-input-form">
+        <form class="input-form">
+          <label for="user-input">Input</label>
+          <input type="text" id="user-input" name="user-input" />
+          <label for="user-lang">Language</label>
+          <select name="languages" id="languages">
+            <option value="english">English</option>
+            <option value="auto">Auto</option>
+            <option value="spanish">Spanish</option>
+            <option value="portuguese">Portuguese</option>
+            <option value="german">German</option>
+            <option value="french">French</option>
+            <option value="italian">Italian</option>
+          </select>
+        </form>
+        <section class="suggestions">
+          <h1>Things to Try</h1>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </section>
+      </div>
+    </section>
+    <section class="results"></section>
+  </main>
 </body>
 </html>

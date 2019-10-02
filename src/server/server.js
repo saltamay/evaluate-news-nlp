@@ -1,9 +1,20 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
 const app = express();
 
-app.use(express.static('./dist'));
+app.use(cors());
 
-console.log('dirname: ' + __dirname);
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+
+// parse application/json
+app.use(bodyParser.json())
+
+
+app.use(express.static('./dist'));
 
 app.get('/', (req, res, next) => {
   res.status(200).send('./dist/index.html');
@@ -12,7 +23,7 @@ app.get('/', (req, res, next) => {
 const PORT = 8000;
 
 app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
+  console.log(`CORS-enabled web server listening on port ${PORT}!`);
 })
 
 
