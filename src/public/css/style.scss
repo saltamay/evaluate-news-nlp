@@ -1,0 +1,76 @@
+$font-stack: Arial, Helvetica, sans-serif;
+$font-size: 14px;
+$default-color: #000;
+$primary-color: #28384e;
+$secondary-color: #669bd2;
+
+body {
+  color: $default-color;
+  font-family: $font-stack;
+  font-size: $font-size;
+}
+
+.app-container {
+  padding: 2rem 1rem;
+}
+
+p {
+  line-height: 1.5;
+  padding: 0.5rem 0 1rem 0;
+}
+
+h1 {
+  color: $primary-color;
+  font-size: 2rem;
+}
+
+h1.title,
+h1.examples-subtitle {
+  color: $secondary-color;
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+
+.form-container {
+  $font-color-normal: rgba(40,56,78,0.6);
+  $font-color-focus: #28384e;
+  $border-color-normal: rgba(40,56,78,0.1);
+  $border-color-focus: #28384e;
+
+  label {
+    color: $font-color-normal;
+    display: block;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+
+  label:focus {
+    color: $font-color-focus;
+  }
+
+  input#user-input,
+  select#languages {
+    border: 1px solid $border-color-normal;
+    border-radius: 5px;
+    margin: 0.5rem 0; 
+  }
+
+  input#user-input {
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+    width: 95%;
+  }
+
+  select#languages {
+    height: 40px;
+    width: 100%;
+  }
+}
+
+// .examples {
+  
+// }
+
+
+

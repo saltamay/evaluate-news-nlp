@@ -1,10 +1,12 @@
 import test from '../test/test';
-// import testAPI from '../test/testAPI';
+
+/* Import style sheets */
+import './css/reset.scss';
+import './css/style.scss';
 
 console.log('Entry point is successfully setup'); 
 
 test();
-// testAPI();
 
 const makeAPICall = async () => {
   const data = {
