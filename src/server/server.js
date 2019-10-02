@@ -20,7 +20,7 @@ app.get('/', (req, res, next) => {
   res.status(200).send('./dist/index.html');
 })
 
-const PORT = 8000;
+const PORT = 8080;
 
 app.listen(PORT, () => {
   console.log(`CORS-enabled web server listening on port ${PORT}!`);
