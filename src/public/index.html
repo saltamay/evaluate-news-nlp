@@ -11,13 +11,13 @@
     <div class="app-layout">
       <main>
         <div class="app-container">
-          <section class="user-input-section">
+          <section class="input-section">
             <h1 class="title">Document Analysis</h1>
             <p>Analyze this is an app that uses NLP(Natural Language Processing) to analyze your sentimentaly, summarize it and gives you hashtag suggestions.</p>
             <div class="form-container">
-              <form class="input-form">
+              <form class="input-form" autocomplete="off">
                 <label for="user-input">Input</label>
-                <input type="text" id="user-input" name="user-input" />
+                <textarea type="text" id="user-input" name="user-input" rows="5"></textarea>
                 <label for="user-lang">Language</label>
                 <select name="languages" id="languages">
                   <option value="english">English</option>
@@ -31,11 +31,36 @@
                 <button type="submit" id="submit">Analyze</button>
               </form>
             </div>
-            <section class="examples">
+            <!-- <section class="examples-section">
               <h1 class="examples-subtitle">Things to Try</h1>
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
               <a href="#">Link 3</a>
+            </section> -->
+            <section id="results-section">
+              <div class="app-container">
+              <div id="submitted">
+                <h4 class="title">Submitted Text</h4>
+                <p id="submitted_text"></p>
+              </div>
+              <div id="results">
+                <h4 class="title">Results</h4>
+                <table class="results_table">
+                  <thead>
+                    <tr>
+                      <th>Polarity</th>
+                      <th>Confidence</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="result_display"></td>
+                      <td class="result_display"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>
             </section>
           </section>
 
@@ -45,5 +70,14 @@
       </main>
     </div>
   </div>
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
 </body>
 </html>

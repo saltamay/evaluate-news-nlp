@@ -1,8 +1,8 @@
-import test from '../test/test';
+import test from '../../test/test';
 
 /* Import style sheets */
-import './css/reset.scss';
-import './css/style.scss';
+import '../css/reset.scss';
+import '../css/style.scss';
 
 console.log('Entry point is successfully setup'); 
 
@@ -25,10 +25,23 @@ const onSubmitText = async () => {
     if (response.ok) {
       const jsonRes = await response.json();
       console.log(jsonRes); 
+      displayResults(jsonRes);
     }
   } catch(error) {
     console.log(error);
   }
+}
+
+const displayResults = (response) => {
+  
+  document.getElementById('results-section').style.display = 'block';
+  document.getElementById('submitted_text').innerText = response.text;
+  
+  const tableData = document.querySelectorAll('.result_display');
+  console.log(tableData);
+
+  tableData[0].innerText = response.polarity[0].toUpperCase() + response.polarity.slice(1);
+  tableData[1].innerText = response['polarity_confidence'].toFixed(2);
 }
 
 

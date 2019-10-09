@@ -34,7 +34,6 @@ const textapi = new AYLIENTextAPI({
 });
 
 
-
 app.post('/sentiment', (req, res, next) => {
   if(req.body.text !== " ") {
     const text = req.body.text;

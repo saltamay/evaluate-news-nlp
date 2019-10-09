@@ -1,10 +1,12 @@
 const path = require('path');
 const webpack = require('webpack');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 
 const HTMLWebPackPlugin = require('html-webpack-plugin');
 
+
 module.exports = {
-  entry: './src/public/index.js',
+  entry: './src/public/js/index.js',
   mode: 'development',
   module: {
     rules: [
@@ -12,6 +14,10 @@ module.exports = {
         test: '/\.js$/',
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   },
@@ -19,7 +25,7 @@ module.exports = {
     new HTMLWebPackPlugin({
       template: './src/public/index.html',
       filename: 'index.html'
-    }
-    )
+    }),
+    new WorkboxPlugin.GenerateSW()
   ]
 }
