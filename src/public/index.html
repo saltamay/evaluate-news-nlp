@@ -7,69 +7,64 @@
   <title>Document Analyses NLP API</title>
 </head>
 <body>
-  <div id="root">
-    <div class="app-layout">
-      <main>
-        <div class="app-container">
-          <section class="input-section">
-            <h1 class="title">Document Analysis</h1>
-            <p>Analyze this is an app that uses NLP(Natural Language Processing) to analyze your sentimentaly, summarize it and gives you hashtag suggestions.</p>
-            <div class="form-container">
-              <form class="input-form" autocomplete="off">
-                <label for="user-input">Input</label>
-                <textarea type="text" id="user-input" name="user-input" rows="5"></textarea>
-                <label for="user-lang">Language</label>
-                <select name="languages" id="languages">
-                  <option value="english">English</option>
-                  <option value="auto">Auto</option>
-                  <option value="spanish">Spanish</option>
-                  <option value="portuguese">Portuguese</option>
-                  <option value="german">German</option>
-                  <option value="french">French</option>
-                  <option value="italian">Italian</option>
-                </select>
-                <button type="submit" id="submit">Analyze</button>
-              </form>
-            </div>
+  <main id="root">
+    <div class="app-container">
+      <div class="container">
+        <section class="input-section">
+          <h1 class="title">Document Analysis</h1>
+          <p>Analyze this is an app that uses NLP(Natural Language Processing) to analyze your sentimentaly, summarize it and gives you hashtag suggestions.</p>
+          <div class="form-container">
+            <form class="input-form" autocomplete="off">
+              <label for="user-input">Input</label>
+              <textarea type="text" id="user-input" name="user-input" rows="5"></textarea>
+              <label for="user-lang">Language</label>
+              <select name="languages" id="languages">
+                <option value="english">English</option>
+                <option value="auto">Auto</option>
+                <option value="spanish">Spanish</option>
+                <option value="portuguese">Portuguese</option>
+                <option value="german">German</option>
+                <option value="french">French</option>
+                <option value="italian">Italian</option>
+              </select>
+              <button type="submit" id="submit">Analyze</button>
+            </form>
+          </div>
             <!-- <section class="examples-section">
               <h1 class="examples-subtitle">Things to Try</h1>
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
               <a href="#">Link 3</a>
             </section> -->
-            <section id="results-section">
-              <div class="app-container">
-              <div id="submitted">
-                <h4 class="title">Submitted Text</h4>
-                <p id="submitted_text"></p>
-              </div>
-              <div id="results">
-                <h4 class="title">Results</h4>
-                <table class="results_table">
-                  <thead>
-                    <tr>
-                      <th>Polarity</th>
-                      <th>Confidence</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="result_display"></td>
-                      <td class="result_display"></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              </div>
-            </section>
-          </section>
-
-          <!--Results Section-->
-          <section class="results"></section>
-        </div>
-      </main>
+        </section>
+      </div>
+      <div class="container">
+        <section id="results-section">
+          <div id="submitted">
+            <h4 class="title">Submitted Text</h4>
+            <p id="submitted_text"></p>
+          </div>
+          <div id="results">
+            <h4 class="title">Results</h4>
+            <table class="results_table">
+              <thead>
+                <tr>
+                  <th>Polarity</th>
+                  <th>Confidence</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="result_display"></td>
+                  <td class="result_display"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
     </div>
-  </div>
+  </main>
   <script>
     // Check that service workers are supported
     if ('serviceWorker' in navigator) {

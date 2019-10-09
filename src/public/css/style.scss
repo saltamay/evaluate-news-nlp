@@ -5,13 +5,19 @@ $primary-color: #28384e;
 $secondary-color: #669bd2;
 
 body {
-  background-color: #f9f9f9;  
+  
   color: $default-color;
   font-family: $font-stack;
   font-size: $font-size;
 }
 
 .app-container {
+  background-color: #f9f9f9;
+  max-width: 90%;
+  margin: 5% auto;  
+}
+
+.container {
   padding: 1rem 1rem;
 }
 
@@ -96,6 +102,7 @@ h4.title {
   background-color: rgba(226, 229, 231, 0.3);
   display: none;
   margin-top: 1rem;
+  padding: 1rem;
 }
 
 #submitted_text {
@@ -131,6 +138,23 @@ h4.title {
     // opacity: 0.6;
   }
 }
+
+/* Media Queries */
+@media screen and (min-width: 548px) {
+  .app-container {
+    max-width: 80%;
+    margin: 5% auto;
+  }
+}
+
+@media screen and (min-width: 798px) {
+  .app-container {
+    max-width: 798px;
+    margin: 5% auto;
+  }
+}
+
+
 
 
 
