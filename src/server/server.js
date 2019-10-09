@@ -1,20 +1,18 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
 const AYLIENTextAPI = require('aylien_textapi');
+const dotenv = require('dotenv');
+dotenv.config();
 
 const app = express();
-
 app.use(cors());
-
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // parse application/json
 app.use(bodyParser.json())
-
 
 app.use(express.static('./dist'));
 
@@ -28,9 +26,13 @@ app.listen(PORT, () => {
   console.log(`CORS-enabled web server listening on port ${PORT}!`);
 })
 
+// Set up Aylien SDK
+const api_id = process.env.API_ID;
+const api_key = process.env.API_KEY;
+
 const textapi = new AYLIENTextAPI({
-  application_id: "30e293c0",
-  application_key: "2848c8941cc4d6ae426d9239d9a3d522"
+  application_id: api_id,
+  application_key: api_key
 });
 
 

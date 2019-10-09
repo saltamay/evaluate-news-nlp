@@ -24,7 +24,6 @@ const onSubmitText = async () => {
     });
     if (response.ok) {
       const jsonRes = await response.json();
-      console.log(jsonRes); 
       displayResults(jsonRes);
     }
   } catch(error) {
