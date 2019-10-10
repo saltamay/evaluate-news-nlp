@@ -1,4 +1,4 @@
-const onSubmitText = async (text) => {
+export default async function request(text) {
   try {
     const response = await fetch('http://localhost:8080/sentiment',
       {
@@ -15,4 +15,3 @@ const onSubmitText = async (text) => {
   }
 }
 
-export default onSubmitText;
