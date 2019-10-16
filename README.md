@@ -24,6 +24,17 @@ NLP is considered its own branch of computer science, focused on computers’ ab
 
 You could spend years and get a masters degree focusing on the details of creating NLP systems and algorithms. Typically, NLP programs require far more resources than individuals have access to, but a fairly new API called Aylien has put a public facing API in front of their NLP system. We will use it in this project to determine various attributes of an article or blog post.
 
+### Learning Outcomes
+
+The goal of this project is to give you practice with:
+
+- Setting up Webpack
+- Sass styles
+- Webpack Loaders and Plugins
+- Creating layouts and page design
+- Service workers
+- Using APIs and creating requests to external urls
+
 ## API(s) Used
 
 * [Aylien API](https://docs.aylien.com/textapi/#getting-started) - The AYLIEN Text Analysis API is a package of Natural Language Processing and Machine Learning-powered APIs for analyzing and extracting various kinds of information from textual content.
