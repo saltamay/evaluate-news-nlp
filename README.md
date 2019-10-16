@@ -55,7 +55,7 @@ The goal of this project is to give you practice with:
 
 1. Download or clone the project:
 ```
-git clone https://github.com/saltamay/travel-app.git [folder_name]
+git clone https://github.com/saltamay/evaluate-news-nlp.git [folder_name]
 ```
 2. Install dependencies
 ```
